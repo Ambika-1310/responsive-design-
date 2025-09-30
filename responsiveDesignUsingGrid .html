@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(240, 240, 112);
+        }
+        .child {
+            height: 30vh;
+            width: 40vh;
+            border: 2px solid black;
+            background-color: rgb(236, 171, 51);
+            border-radius: 30px;
+            margin: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #gridContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 1024px) {
+            #gridContainer {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            #gridContainer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;text-decoration:underline;">Responsive design</h1>
+    <div id="gridContainer">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+    </div>
+</body>
+
+</html>
