@@ -1,0 +1,34 @@
+#gridContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* allows auto wrapping */
+    flex-direction: row;
+}
+
+.child {
+    height: 30vh;
+    width: 40vh;
+    border: 2px solid black;
+    background-color: rgb(236, 171, 51);
+    border-radius: 30px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    #gridContainer {
+        flex-direction: column; /* stack vertically */
+    }
+    .child {
+        width: 80%;  /* take more width on small screens */
+        height: auto; /* adjust height automatically */
+        font-size: 24px; /* slightly smaller font */
+    }
+}
